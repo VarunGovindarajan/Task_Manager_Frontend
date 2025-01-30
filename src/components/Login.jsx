@@ -25,6 +25,7 @@ function Login({ isAuthenticated, setIsAuthenticated }) {
         setEmail("");
         setPassword("");
         setIsAuthenticated(true);
+        localStorage.setItem("isAuthenticated", "true"); // Persist auth status
         toast.success(res.data.message);
       })
       .catch((error) => {
